@@ -9,15 +9,29 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "axios": "^1.13.2",
+    "effector": "^23.4.4",
+    "effector-react": "^23.3.0",
+    "framer-motion": "^12.33.0",
     "next": "16.1.4",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.71.1",
+    "react-paginate": "^8.3.0",
+    "react-range": "^1.10.0",
+    "react-select": "^5.10.2",
+    "react-slick": "^0.31.0",
+    "react-toastify": "^11.0.5",
+    "sass": "^1.97.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^8.53.1",
     "@typescript-eslint/parser": "^8.53.1",
     "eslint": "^9",
