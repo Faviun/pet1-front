@@ -1,4 +1,4 @@
-import { useStore } from 'effector-react'
+import { useUnit } from 'effector-react'
 import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import { $boilerPart } from '@/context/boilerPart'
@@ -8,7 +8,7 @@ import { formatPrice } from '@/lib/utils/common'
 import { $shoppingCart } from '@/context/shopping-cart'
 import CartHoverCheckedSvg from '@/components/elements/CartHoverCheckedSvg/CartHoverCheckedSvg'
 import CartHoverSvg from '@/components/elements/CartHoverSvg/CartHoverSvg'
-import spinnerStyles from '@/styles/spinner/index.module.scss'
+import spinnerStyles from '@/styles/spinner.module.scss'
 import { toggleCartItem } from '@/lib/utils/shopping-cart'
 import { $user } from '@/context/user'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
@@ -22,19 +22,19 @@ import {
 } from '@/context/boilerParts'
 import PartAccordion from '@/components/modules/PartPage/PartAccordion'
 import { removeFromCartFx } from '@/lib/api/shopping-cart'
-import styles from '@/styles/part/index.module.scss'
+import styles from '@/styles/part.module.scss'
 
 const PartPage = () => {
-  const mode = useStore($mode)
-  const user = useStore($user)
+  const mode = useUnit($mode)
+  const user = useUnit($user)
   const isMobile = useMediaQuery(850)
-  const boilerPart = useStore($boilerPart)
-  const boilerParts = useStore($boilerParts)
-  const cartItems = useStore($shoppingCart)
+  const boilerPart = useUnit($boilerPart)
+  const boilerParts = useUnit($boilerParts)
+  const cartItems = useUnit($shoppingCart)
   const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
   const isInCart = cartItems.some((item) => item.partId === boilerPart.id)
-  const spinnerToggleCart = useStore(removeFromCartFx.pending)
-  const spinnerSlider = useStore(getBoilerPartsFx.pending)
+  const spinnerToggleCart = useUnit(removeFromCartFx.pending)
+  const spinnerSlider = useUnit(getBoilerPartsFx.pending)
 
   useEffect(() => {
     loadBoilerPart()
@@ -98,7 +98,7 @@ const PartPage = () => {
                       {isInCart ? <CartHoverCheckedSvg /> : <CartHoverSvg />}
                     </span>
                     {isInCart ? (
-                      <span>Добавлено в карзину</span>
+                      <span>Добавлено в корзину</span>
                     ) : (
                       <span>Положить в корзину</span>
                     )}

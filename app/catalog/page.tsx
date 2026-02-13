@@ -7,7 +7,7 @@ import { IQueryParams } from '@/lib/types/catalog'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import CatalogPage from '@/components/templates/CatalogPage/CatalogPage'
 
-function Catalog({ query }: { query: IQueryParams }) {
+function Catalog() {
   const { shouldLoadContent } = useRedirectByUserCheck()
 
   return (
@@ -22,7 +22,7 @@ function Catalog({ query }: { query: IQueryParams }) {
       <Layout>
         <main>
           <Breadcrumbs currentPage="Каталог" />
-          <CatalogPage query={query} />
+          <CatalogPage />
           <div className="overlay" />
         </main>
       </Layout>

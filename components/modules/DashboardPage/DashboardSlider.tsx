@@ -74,13 +74,9 @@ const DashboardSlider = ({
             <div className={styles.dashboard__slide__inner}>
               <Link
                 href={goToPartPage ? `/catalog/${item.id}` : '/catalog'}
-                passHref
+                className={styles.dashboard__slide__title}
               >
-                <a href="">
-                  <h3 className={styles.dashboard__slide__title}>
-                    {item.name}
-                  </h3>
-                </a>
+                <h3>{item.name}</h3>
               </Link>
               <span className={styles.dashboard__slide__code}>
                 Артикул: {item.vendor_code}

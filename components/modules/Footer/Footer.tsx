@@ -70,7 +70,7 @@ const Footer = () => {
                   className={styles.footer__top__item__list__item__link}
                 >
                   <span>Наш адрес:</span>
-                  <span>г. Москва, ул. ... д....</span>
+                  <span>г. Дубоссары</span>
                   <span>
                     <MarkerSvg />
                   </span>
@@ -78,11 +78,11 @@ const Footer = () => {
               </li>
               <li className={styles.footer__top__item__list__item}>
                 <a
-                  href="tel:+780955555555"
+                  href="tel:+37360872681"
                   className={styles.footer__top__item__list__item__link}
                 >
                   <span>Наш контактный телефон:</span>
-                  <span>+7(8095) 555-55-55</span>
+                  <span>+(373) 608-72-681</span>
                   <span>
                     <PhoneSvg />
                   </span>
@@ -94,7 +94,7 @@ const Footer = () => {
                   className={styles.footer__top__item__list__item__link}
                 >
                   <span>E-mail:</span>
-                  <span>info@zapchasti.com.ru</span>
+                  <span>alevst22@gmail.com</span>
                   <span>
                     <MailSvg />
                   </span>
@@ -159,7 +159,7 @@ const Footer = () => {
           {isMedia750 && <FooterLogo />}
           <div className={styles.footer__bottom__block}>
             <p className={styles.footer__bottom__block__copyright}>
-              © «Детали для газовых котлов» 2021.
+              © «Детали для газовых котлов» 2026.
             </p>
           </div>
         </div>
